@@ -1,0 +1,16 @@
+# Maven 编译产物（随时能重新生成，不入库）
+target/
+
+# IDEA 个人配置（每人电脑不一样，不入库）
+.idea/
+*.iml
+
+# VS Code 配置
+.vscode/
+
+# 日志
+*.log
+
+# 系统垃圾文件
+.DS_Store
+Thumbs.db
