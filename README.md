@@ -16,7 +16,7 @@
 
 ## 开发计划
 
-- [ ] 用户登录（JWT）
+- [x] 用户登录（JWT）
 - [ ] 帖子 CRUD
 - [ ] 评论与通知
 - [ ] 点赞与热榜（Redis）
@@ -35,3 +35,4 @@
 |------|------|------|
 | GET | /api/user/{id} | 按 ID 查询用户 |
 | POST | /api/user/register | 用户注册 |
+| POST | /api/user/login | 用户登录 |
