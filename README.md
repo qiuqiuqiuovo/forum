@@ -12,10 +12,11 @@
 ## 已完成功能
 
 - [x] 用户查询接口：GET /api/user/{id}
+- [x] 用户注册接口：POST /api/user/register
 
 ## 开发计划
 
-- [ ] 用户注册 / 登录（JWT）
+- [ ] 用户登录（JWT）
 - [ ] 帖子 CRUD
 - [ ] 评论与通知
 - [ ] 点赞与热榜（Redis）
@@ -33,3 +34,4 @@
 | 方法 | 路径 | 说明 |
 |------|------|------|
 | GET | /api/user/{id} | 按 ID 查询用户 |
+| POST | /api/user/register | 用户注册 |
