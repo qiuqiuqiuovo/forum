@@ -15,11 +15,11 @@
 - [x] 用户注册接口：POST /api/user/register
 - [x] 用户登录接口：POST /api/user/login（JWT 签发）
 - [x] JWT 拦截器（接口门禁）
+- [x] 帖子 CRUD（发帖/列表/详情/删帖）
 
 ## 开发计划
 
 - [x] 用户登录（JWT）
-- [ ] 帖子 CRUD
 - [ ] 评论与通知
 - [ ] 点赞与热榜（Redis）
 
@@ -38,3 +38,7 @@
 | GET | /api/user/{id} | 按 ID 查询用户 |
 | POST | /api/user/register | 用户注册 |
 | POST | /api/user/login | 用户登录 |
+| POST | /api/post | 发帖（需令牌） |
+| GET | /api/post | 帖子列表 |
+| GET | /api/post/{id} | 帖子详情 |
+| DELETE | /api/post/{id} | 删帖（需令牌） |

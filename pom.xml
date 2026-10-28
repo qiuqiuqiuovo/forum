@@ -45,6 +45,19 @@
             <version>3.5.10</version>
         </dependency>
 
+        <!-- MyBatis-Plus 扩展模块（分页插件需要） -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>3.5.10</version>
+        </dependency>
+        <!-- MyBatis-Plus 分页插件底层的 SQL 解析器 -->
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>4.9</version>
+        </dependency>
+
         <!-- 4. Lombok：用注解自动生成 getter/setter/构造方法，少写样板代码 -->
         <dependency>
             <groupId>org.projectlombok</groupId>

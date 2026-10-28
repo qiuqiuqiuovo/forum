@@ -12,14 +12,18 @@ public class JwtInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        // 1. 从请求头取令牌
+        // GET 请求游客可看，直接放行（不需要令牌）
+        if ("GET".equalsIgnoreCase(request.getMethod())) {
+            return true;
+        }
+
+        // 以下非 GET 请求（POST/PUT/DELETE）需要验证令牌
         String token = request.getHeader("Authorization");
         if (token == null || !token.startsWith("Bearer ")) {
             throw new BusinessException("未登录或令牌缺失");
         }
         token = token.substring(7);   // 去掉 "Bearer " 前缀（7 个字符）
 
-        // 2. 验签 + 解出用户信息
         try {
             Claims claims = JwtUtil.parseToken(token);
             Long userId = Long.valueOf(claims.getSubject());
