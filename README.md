@@ -13,6 +13,8 @@
 
 - [x] 用户查询接口：GET /api/user/{id}
 - [x] 用户注册接口：POST /api/user/register
+- [x] 用户登录接口：POST /api/user/login（JWT 签发）
+- [x] JWT 拦截器（接口门禁）
 
 ## 开发计划
 
