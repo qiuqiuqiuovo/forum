@@ -16,11 +16,10 @@
 - [x] 用户登录接口：POST /api/user/login（JWT 签发）
 - [x] JWT 拦截器（接口门禁）
 - [x] 帖子 CRUD（发帖/列表/详情/删帖）
+- [x] 评论功能（发评论/查评论/删评论）
 
 ## 开发计划
 
-- [x] 用户登录（JWT）
-- [ ] 评论与通知
 - [ ] 点赞与热榜（Redis）
 
 ## 本地运行
@@ -42,3 +41,6 @@
 | GET | /api/post | 帖子列表 |
 | GET | /api/post/{id} | 帖子详情 |
 | DELETE | /api/post/{id} | 删帖（需令牌） |
+| POST | /api/comment | 发评论（需令牌） |
+| GET | /api/comment?postId={id} | 查某帖子的评论 |
+| DELETE | /api/comment/{id} | 删评论（需令牌） |
