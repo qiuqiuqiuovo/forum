@@ -17,10 +17,9 @@
 - [x] JWT 拦截器（接口门禁）
 - [x] 帖子 CRUD（发帖/列表/详情/删帖）
 - [x] 评论功能（发评论/查评论/删评论）
+- [x] 点赞与热榜（Redis Set + ZSet）
 
 ## 开发计划
-
-- [ ] 点赞与热榜（Redis）
 
 ## 本地运行
 
@@ -44,3 +43,7 @@
 | POST | /api/comment | 发评论（需令牌） |
 | GET | /api/comment?postId={id} | 查某帖子的评论 |
 | DELETE | /api/comment/{id} | 删评论（需令牌） |
+| POST | /api/like/{postId} | 点赞（需令牌） |
+| DELETE | /api/like/{postId} | 取消赞（需令牌） |
+| GET | /api/like/{postId} | 查点赞状态+赞数（需令牌） |
+| GET | /api/like/hot | 热榜 |
